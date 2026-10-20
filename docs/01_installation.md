@@ -1,7 +1,18 @@
 # 1. Installation
 
-Tested on: Ubuntu 24.04, ROS 2 Jazzy (apt), `ur_robot_driver` 3.7, MoveIt 2.12,
-`pymoveit2` 4.2, UR5 (CB3), RealSense D435i.
+Required: **Ubuntu 24.04 LTS** (native, not a VM) + **ROS 2 Jazzy** + system **Python 3.12**.
+Tested on Ubuntu 24.04.4, `ur_robot_driver` 3.7.0, MoveIt 2.12.4, `pymoveit2` 4.2.0,
+UR5 (CB3), RealSense D435i. The full version table is in the
+[README](../README.md#requirements).
+
+Check your system:
+
+```bash
+lsb_release -ds                   # Ubuntu 24.04.x LTS
+python3 --version                 # Python 3.12.x
+echo $ROS_DISTRO                  # jazzy  (after sourcing ROS)
+dpkg -l | grep ros-jazzy-ur-robot-driver
+```
 
 ## 1.1 ROS 2 Jazzy
 

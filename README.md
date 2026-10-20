@@ -20,6 +20,39 @@ with UR5() as robot:
 
 ---
 
+## Requirements
+
+| | Required | Tested with |
+|---|---|---|
+| OS | **Ubuntu 24.04 LTS (Noble)**, native install (not a VM: real-time network to the robot) | 24.04.4, kernel 6.17 |
+| ROS 2 | **Jazzy Jalisco** (apt, `ros-jazzy-desktop`) | — |
+| Python | system **3.12** (the one ROS Jazzy is built for) | 3.12.3 |
+| Robot | UR5 CB3 (Polyscope ≥ 3.14.3) or e-Series (≥ 5.9.4) | UR5 CB3 |
+| Network | wired Ethernet port | — |
+| Camera (optional) | Intel RealSense D435 / D435i, USB 3 | D435i |
+| Gripper (optional) | Robotiq 2F via USB/RS-485 adapter | Robotiq 2F |
+| GPU | not needed for this toolkit | — |
+
+Other Ubuntu/ROS combinations (22.04 + Humble, 24.04 + Rolling) are **not** supported:
+package names, controller names and the MoveIt Servo API differ.
+
+Tested package versions (installed by `install_dependencies.sh` from the ROS apt repo):
+
+| Package | Version |
+|---|---|
+| `ros-jazzy-ur-robot-driver` / `ur-controllers` / `ur-moveit-config` | 3.7.0 |
+| `ros-jazzy-ur-description` | 3.5.0 |
+| `ros-jazzy-ur-client-library` | 2.9.0 |
+| `ros-jazzy-moveit-ros-move-group` / `moveit-servo` | 2.12.4 |
+| `ros-jazzy-controller-manager` | 4.44.0 |
+| `ros-jazzy-pymoveit2` | 4.2.0 |
+| `ros-jazzy-rclpy` | 7.1.11 |
+| `ros-jazzy-realsense2-camera` / `librealsense2` | 4.57.7 / 2.57.7 |
+| `python3-numpy` / `python3-scipy` / `python3-serial` | 1.26.4 / 1.11.4 / 3.5 |
+
+Newer patch versions from `apt upgrade` should work. If something breaks after an
+upgrade, compare against this table first.
+
 ## 1. Install (once per laptop)
 
 Ubuntu 24.04 + ROS 2 Jazzy ([install guide](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)), then:
