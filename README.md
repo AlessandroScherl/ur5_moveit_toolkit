@@ -2,8 +2,7 @@
 
 Everything you need to move a **Universal Robots UR5** with **ROS 2 Jazzy + MoveIt 2**:
 bringup launch files, a tuned MoveIt Servo setup, controller switching, command-line tools
-and a small Python API. It was extracted from the ART-VS (ViT-VS) real-robot pipeline, where it was used for
-visual servoing and pick-and-place.
+and a small Python API. 
 
 ```python
 from ur5_moveit_toolkit import UR5
