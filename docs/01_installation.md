@@ -12,7 +12,7 @@ Follow <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>
 
 ```bash
 mkdir -p ~/ur5_ws/src && cd ~/ur5_ws/src
-git clone <this-repo-url> ur5_moveit_toolkit
+git clone https://github.com/AlessandroScherl/ur5_moveit_toolkit.git
 ./ur5_moveit_toolkit/install_dependencies.sh
 cd ~/ur5_ws
 source /opt/ros/jazzy/setup.bash

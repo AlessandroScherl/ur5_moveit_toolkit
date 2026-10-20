@@ -26,7 +26,7 @@ Ubuntu 24.04 + ROS 2 Jazzy ([install guide](https://docs.ros.org/en/jazzy/Instal
 
 ```bash
 mkdir -p ~/ur5_ws/src && cd ~/ur5_ws/src
-git clone <this-repo-url> ur5_moveit_toolkit
+git clone https://github.com/AlessandroScherl/ur5_moveit_toolkit.git
 ./ur5_moveit_toolkit/install_dependencies.sh      # apt packages (asks for sudo)
 cd ~/ur5_ws && colcon build --symlink-install
 echo "source ~/ur5_ws/install/setup.bash" >> ~/.bashrc && source ~/.bashrc
